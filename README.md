@@ -75,13 +75,17 @@ But, it’s not always clear whether a person’s words are actually announcing 
 ## Discovering the Data
 
 <b> Checking out the proportion of the data </b>
-![Proportion]('../reports/figures/real_vs_not_real.png')
+
+![Proportion](./reports/figures/real_vs_not_real.png)
+
 <br>
 <i>It looks like we have slightly more non-disaster value compared to disaster value but<br>
 there is no wide gap.</i><br>
 
 <b> Checking out the word count of the disaster and non-disaster </b>
-![word count]('../reports/figures/word_count.png')
+
+![word count](./reports/figures/word_count.png)
+
 <br>
 <i>We can see that overall not disaster tweets have more words<br>
 compared to disaster tweets.</i>
