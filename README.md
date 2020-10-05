@@ -90,7 +90,7 @@ there is no wide gap.</i><br>
 <i>We can see that overall not disaster tweets have more words<br>
 compared to disaster tweets.</i><br>
 
-<b> Checking out the average word length </b>
+<b> Checking out the average word length </b><br>
 ![avg_word_length](./reports/figures/avg_word_length.png)
 <i>The avg word length is very similar.</i><br>
 
