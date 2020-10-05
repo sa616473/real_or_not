@@ -54,9 +54,9 @@ def word_cloud(tweet_data):
     plt.title('Disaster')
     text_disaster = " ".join(text for text in tweet_data[tweet_data['target'] == 1]['text'])
     wordcloud = WordCloud(stopwords=stopwords, background_color="black").generate(text_disaster)
-    plt.imshow(wordcloud, interpolation='bilinear',)
-    plt.show()
+    plt.imshow(wordcloud, interpolation='bilinear')
     plt.savefig('../reports/figures/disaster.png')
+    plt.show()
     
     plt.title('Non Disaster')
     text_normal = " ".join(text for text in tweet_data[tweet_data['target'] == 0]['text'])
