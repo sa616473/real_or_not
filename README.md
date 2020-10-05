@@ -103,8 +103,9 @@ compared to disaster tweets.</i><br>
 <i>We can see that disaster tweets usally have <b>"Fire, Suicide bombing, car crash e.t.c"</b> <br>and non disaster has more words like <b>"love, people,good e.t.c "</b>
  <br>
     <br>
-    We can see the keywords are a better indicator distinguishing between disaster and non disaster.</i>
-<b> Punctuation </b>
+    We can see the keywords are a better indicator distinguishing between disaster and non disaster.</i><br>
+    
+<b> Punctuation </b><br>
 |Disaster|Non-Disaster|
 |---------|-----------|
 |![](./reports/figures/punctuations_red.png)|![](./reports/figures/punctuations_cyan.png)|
