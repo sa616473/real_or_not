@@ -125,10 +125,9 @@ compared to disaster tweets.</i><br>
 <i> LSTM is an abbrevation for Long Short Term Memory(LSTM) what this means is that in our neural networks we have a <b>memory cell</b> that can store words that might play a key factor in determining what the output might be at the end of the sentence.</i> <br><br>
 <b> What is an Word Embedding?</b><br>
 <i> A word embedding is a class of approaches for representing words and documents using a dense vector representation.
-
 It is an improvement over more the traditional bag-of-word model encoding schemes where large sparse vectors were used to represent each word or to score each word within a vector to represent an entire vocabulary. These representations were sparse because the vocabularies were vast and a given word or document would be represented by a large vector comprised mostly of zero values</i><br><br>
 <b> What is batchnormalization?</b><br>
-<i>Batch normalization (also known as batch norm) is a method used to make artificial neural networks faster and more stable through normalization of the input layer by re-centering and re-scaling</i><br><br>
+<i>Batch normalization (also known as batch norm) is a method used to make artificial neural networks faster and more stable through normalization of the input layer by re-centering and re-scaling</i><br>
 <h5> Callbacks</h5>
 <i> We used early stopping callbacks with a patience level of 10 so we do not overfit to our validation data</i><br><br>
 
