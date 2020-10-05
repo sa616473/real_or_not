@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 import io
 import json
-
+import re
+import string
 
 def remove_stopwords(tweet_data_text):
     '''
@@ -24,8 +25,30 @@ def remove_stopwords(tweet_data_text):
             "we've", "were", "what", "what's", "when", "when's", "where", "where's", "which", 
             "while", "who", "who's", "whom", "why", "why's", "with", "would", "you", 
             "you'd", "you'll", "you're", "you've", "your", "yours", "yourself", "yourselves" ]
-    tweet_data_text = tweet_data_text.apply(lambda x: [item for item in x if item not in stop])
+    tweet_data_text = tweet_data_text.apply(lambda text: [item for item in text.split() if item not in stop])
+    tweet_data_text = tweet_data_text.apply(lambda text: (" ").join(text))
     return tweet_data_text
+
+def clean_text(text):
+    text = text.lower()
+    text = re.sub('\[.*?\]', '', text)
+    text = re.sub('https?://\S+|www\.\S+', '', text)
+    text = re.sub('<.*?>+', '', text)
+    text = re.sub('[%s]' % re.escape(string.punctuation), '', text)
+    text = re.sub('\n', '', text)
+    text = re.sub('\w*\d\w*', '', text)
+    return text
+
+def remove_emoji(text):
+    emoji_pattern = re.compile("["
+                           u"\U0001F600-\U0001F64F"  # emoticons
+                           u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                           u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                           u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                           u"\U00002702-\U000027B0"
+                           u"\U000024C2-\U0001F251"
+                           "]+", flags=re.UNICODE)
+    return emoji_pattern.sub(r'', text)
 
 def save_tokenizer(text_tokenizer):
     '''

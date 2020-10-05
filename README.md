@@ -1,13 +1,12 @@
 Twitter_real_or_not
 ==============================
 
-How to sense danger using twitter tweets?
+How to detect disasters using twitter tweets?
 
 Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
@@ -23,10 +22,8 @@ Project Organization
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    imported
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
@@ -43,10 +40,51 @@ Project Organization
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
     │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
 
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+## Table of contents
+- Define Problem
+    - How to detect disasters using twitter tweets?
+    
+- Discover Data
+   - Exploratory Data Analysis(EDA)
+   - Data Visualization
+   
+- Develop solutions
+    - Establish a baseline
+    - NLP Models
+    - LSTM
+    - Glove LSTM
+    - Bert
+
+- Deploy solution
+   - Automate the pipeline
+   - Deploy the solution to gcloud and firebase
+   
+## Defining The Problem
+
+### How can we identify the disasters through tweets?
+
+<i>Twitter has become an important communication channel in times of emergency. The ubiquitousness of smartphones enables people to announce an emergency they’re observing in real-time. Because of this, more agencies are interested in programatically monitoring Twitter (i.e. disaster relief organizations and news agencies)<br>
+
+But, it’s not always clear whether a person’s words are actually announcing a disaster. Through this project we want to solve this problem using some advanced technologies of NLP and accuratley classify between emergency and non-emergency tweets.</i>
+
+## Discovering the Data
+
+<b> Checking out the proportion of the data </b>
+![Proportion]('../reports/figures/real_vs_not_real.png')
+<br>
+<i>It looks like we have slightly more non-disaster value compared to disaster value but<br>
+there is no wide gap.</i><br>
+
+<b> Checking out the word count of the disaster and non-disaster </b>
+![word count]('../reports/figures/word_count.png')
+<br>
+<i>We can see that overall not disaster tweets have more words<br>
+compared to disaster tweets.</i>
+
+
+
