@@ -92,6 +92,7 @@ compared to disaster tweets.</i><br>
 
 <b> Checking out the average word length </b><br>
 ![avg_word_length](./reports/figures/avg_word_length.png)
+<br>
 <i>The avg word length is very similar.</i><br>
 
 <b> Word Clouds </b>
