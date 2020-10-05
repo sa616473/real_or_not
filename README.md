@@ -103,13 +103,61 @@ compared to disaster tweets.</i><br>
 <i>We can see that disaster tweets usally have <b>"Fire, Suicide bombing, car crash e.t.c"</b> <br>and non disaster has more words like <b>"love, people,good e.t.c "</b>
  <br>
     <br>
-    We can see the keywords are a better indicator distinguishing between disaster and non disaster.</i><br>
+    We can see the keywords are a better indicator distinguishing between disaster and non disaster.</i><br><br>
     
 <b> Punctuation </b><br>
 |Disaster|Non-Disaster|
 |---------|-----------|
 |![](./reports/figures/punctuations_red.png)|![](./reports/figures/punctuations_cyan.png)|
-<br>
+<br><br>
+
+### Developing Solutions
+
+#### Establishing the Baseline
+- <i> We used the most frequently apprearing key words as our baseline </i>
+- <i> We achieved a 0.588 mean F-1 score and was placed at 1131 of 1273 teams in the kaggle competition. </i><br><br>
+
+#### 1. LSTM model
+
+- <i> We used an LSTM model with word embedding and batch normalization </i>
+- <i> We also used Early stopping call backs</i><br><br>
+<b> What is an LSTM Model?</b><br>
+<i> LSTM is an abbrevation for Long Short Term Memory(LSTM) what this means is that in our neural networks we have a <b>memory cell</b> that can store words that might play a key factor in determining what the output might be at the end of the sentence.</i> <br><br>
+<b> What is an Word Embedding?</b><br>
+<i> A word embedding is a class of approaches for representing words and documents using a dense vector representation.
+
+It is an improvement over more the traditional bag-of-word model encoding schemes where large sparse vectors were used to represent each word or to score each word within a vector to represent an entire vocabulary. These representations were sparse because the vocabularies were vast and a given word or document would be represented by a large vector comprised mostly of zero values</i><br><br>
+<b> What is batchnormalization?</b><br>
+<i>Batch normalization (also known as batch norm) is a method used to make artificial neural networks faster and more stable through normalization of the input layer by re-centering and re-scaling</i><br><br>
+<h5> Callbacks</h5>
+<i> We used early stopping callbacks with a patience level of 10 so we do not overfit to our validation data</i><br><br>
+
+- <b> Results </b>
+- <i> The LSTM submission resulted in a F1-Score of 0.76892 and was placed as 847 of 1273 teams which is a great improvment from baseline model.</i><br>
+- <b> Performance Graphs for 128, 64, 32 Dimensions </b>
+- ![](./reports/performance/model_LSTM_128.png)
+- ![](./reports/performance/model_LSTM_64.png)
+- ![](./reports/performance/model_LSTM_32.png)
+
+#### 2. Glove LSTM
+
+- <i> After our first model we decided to enchance our model a little bit because we only have around 7000 tweets and this not a very big dataset for our model to learn the complex patterns.</i>
+- <i> So we decide to help our model a little bit by use an unsupervised learning algorithm called Glove </i>
+- <b> What is Glove?</b><br>
+<i>GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space. </i><br>
+- <b> Results </b>
+-  <i>The glove LSTM submission resulted in a F1-Score of 0.80171 and was placed 601 of 1273 which is an improvment from LSTM model.</i>
+- <b> Performance Graphs for 300, 200, 100 Dimensions </b>
+- ![](./reports/performance/glove_LSTM_300.png)
+- ![](./reports/performance/glove_LSTM_200.png)
+- ![](./reports/performance/glove_LSTM_100.png)
+
+#### 3. Bert Model
+
+- <b> Results </b>
+- <i> We were able to achieve an 0.8271 F1-Score were placed in 336 of 1268 teams in the competition </i>
+
+#### Deploying Solutions
 
 
 
