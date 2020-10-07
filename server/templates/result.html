@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+	<header>
+		<div id="brandname">
+			Real or Not app
+        </div>
+		<div class="container">
+
+        <h2>Disaster detecter using twitter tweets</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+
+	<div class="results">
+		<form action="/">
+			<input type="submit" class="btn-info" value="Home">
+		</form>
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Disaster</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Not a Disaster</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
