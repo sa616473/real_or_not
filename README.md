@@ -64,6 +64,9 @@ Project Organization
    - Automate the pipeline
    - Deploy the solution to gcloud and firebase
    
+- Web app [link](https://real-or-not.herokuapp.com/)
+
+   
 ## Defining The Problem
 
 ### How can we identify the disasters through tweets?
@@ -158,6 +161,7 @@ It is an improvement over more the traditional bag-of-word model encoding scheme
 - <i> We were able to achieve an 0.8271 F1-Score were placed in 336 of 1268 teams in the competition </i>
 
 #### Deploying Solutions
-
+ - We deployed our solution using Flask and Heroku
+ - Here is the [link](https://real-or-not.herokuapp.com/)
 
 
